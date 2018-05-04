@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Compile') {
       steps {
-        sh 'min clean compile'
+        sh 'mvn clean compile'
       }
     }
     stage('Test') {
@@ -11,7 +11,7 @@ pipeline {
         sh 'mvn clean test'
       }
     }
-    stage('') {
+    stage('error') {
       steps {
         echo 'End'
       }
